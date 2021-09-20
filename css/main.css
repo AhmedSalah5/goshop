@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color1: #285;
+    --color2: #f5deb3;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+.side-nav{
+    position: fixed;
+    height: 600px;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+.side-nav a{
+    color: #fff;
+    background: #285;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    text-decoration: none;
+    transition: all 0.3s;
+    border-radius: 10px;
+    border: 1px solid #285;
+}
+.side-nav a:hover{
+    background: #472;
+    color: #fff;
+}
+
+.header{
+    height: 100vh;
+    background-image: url(../images/labtop.jpg);
+    background-size: cover;
+}
+.header .text{
+    background: rgba(0,0,0,0.6);
+    width: 50%;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+}
+@media (max-width:991px){
+    .header .text{
+        width: 90%;
+    }
+}
+.header .text img{
+    width: 200px;
+}
+.about-ecommerce{
+    background: #f5deb3;
+    padding: 50px 0;
+}
+.about-ecommerce .text{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.about-ecommerce img{
+    border-radius: 10px;
+}
+.about-ecommerce h2{
+    font-size: 25px;
+} 
+.ec-features{
+    text-align: center;
+    padding: 50px 0;
+}
+.ec-features h2{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.ec-features > p{
+    margin-bottom: 30px;
+}
+.ec-features .ec-feature{
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px var(--color2);
+    padding: 20px;
+    border-radius: 10px;
+}
+.ec-features .ec-feature .icon{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--color1);
+    color: var(--color1);
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+/* -- prices -- */
+.prices{
+    padding: 50px 0;
+}
+.prices h2{
+    margin-bottom: 10px;
+    text-align: center;
+}
+.prices > p{
+    margin-bottom: 30px;
+}
+.prices .ec-plan{
+    padding: 0 15px 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px var(--color1);
+}
+.prices .ec-plan h5{
+    padding: 15px;
+    background: var(--color2);
+    margin-bottom: 15px;
+    border-radius: 0 0 10px 10px;
+    border-bottom: 3px solid var(--color1);
+}
+.prices .ec-plan.common h5{
+    position: relative;
+}
+.prices .ec-plan.common h5::after{
+    content: "أكثر شهرة";
+    position: absolute;
+    display: block;
+    background: #f1a84d;
+    color: var(--color1);
+    border-bottom: 2px solid #932;
+    width: 50%;
+    height: 30px;
+    bottom: -20px;
+    font-size: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+.prices .ec-plan .price{
+    display: block;
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--color1);
+}
+.prices .ec-plan .price span{
+    font-size: 22px;
+    color: #666;
+}
+.prices .ec-plan .time{
+    color: #666;
+    font-size: 20px;
+    font-weight: bold;
+}
+.prices .ec-plan .subscribe{
+    background: var(--color1);
+    border-radius: 20px;
+    color: #fff;
+}
+.prices .ec-plan p{
+    padding: 20px 0;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.ec-plans-compare-btn{
+    padding: 10px 15px;
+    border: 1px solid var(--color1);
+    margin: 20px auto;
+    border-radius: 15px;
+    font-weight: bold;
+    color: var(--color1);
+    transition: all 0.4s;
+}
+.ec-plans-compare-btn:hover{
+    background: var(--color1);
+    color: #fff;
+}
+/* --- plans-compare ---*/
+.ec-plans-compare{
+    padding: 20px 0;
+    text-align: center;
+    display: none;
+}
+.ec-plans-compare .checked{
+    color: var(--color1);
+}
